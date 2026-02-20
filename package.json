@@ -1,15 +1,15 @@
 {
-	"name": "[Project name]",
+	"name": "Canada's food guide",
 	"version": "1.0.0",
-	"description": "[Project description]",
+	"description": "Canada's food guide theme",
 	"main": "index.html",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/ServiceCanada/[project-name].git"
+		"url": "git+https://github.com/ServiceCanada/food-guide.git"
 	},
 	"author": "ServiceCanada",
 	"license": "MIT",
-	"homepage": "https://servicecanada.github.io/[project-name]/",
+	"homepage": "https://servicecanada.github.io/food-guide/",
 	"devDependencies": {
 		"grunt": "^1.6.1",
 		"grunt-banner": "^0.6.0",
