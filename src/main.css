@@ -1,26 +1,24 @@
-/* Canada's food guide (CFG) styles */
-
-/* Background Colour themes 
-#7F0034 (Maroon)
-#EFDFD0 (Beige)
-#D7C3B0 (Beige-dark)
-#B4D4D4 (Aqua-Light)
-#066F6F (Aqua)
-#124A49 (Aqua-dark)
-#FEF9B6 (yellow)
-
-Highlight colours (ie darker rollovers or lighter rollovers)
-#CAEAEA (Aqua-light link rollover)
-#124A49 (Aqua-dark border)
-#E4C1CF (Maroon-light link rollover)
-#610229 (Maroon-dark border)
-*/
+:root {
+  --color-cfg-maroon: #7F0034;
+  --color-cfg-maroon-dark: #610229;
+  --color-cfg-maroon-darker: #3E011A;
+  --color-cfg-beige: #EFDFD0;
+  --color-cfg-beige-dark: #D7C3B0;
+  --color-cfg-beige-darker: #756864;
+  --color-cfg-aqua-light: #B4D4D4;
+  --color-cfg-aqua: #066F6F;
+  --color-cfg-aqua-dark: #124A49;
+  --color-cfg-aqua-darker: #083332;  
+  --color-cfg-yellow: #FEF9B6;
+  --color-cfg-light-rollover:#BDFAFA;
+  --color-cfg-dark-rollover:#250110; 
+}
 
 @media print {
 
   /*Formats H1 header block to print CFG content with a specific header*/
-  main hgroup#wb-cont.cfg {
-    background-color: #EFDFD0 !important;
+  main hgroup#wb-cont.cfg-print {
+    background-color: var(--color-cfg-beige) !important;
     display: flex;
     min-height: 100px;
     -webkit-print-color-adjust: exact !important;    /* For Chrome/Safari */
@@ -28,9 +26,9 @@ Highlight colours (ie darker rollovers or lighter rollovers)
   }
 
   /* Converts the Canada's food guide stacked header text to a maroon box for print */
-  main hgroup#wb-cont.cfg p {
+  main hgroup#wb-cont.cfg-print p {
     width: 150px;
-    background-color: #7F0034 !important;
+    background-color: var(--color-cfg-maroon) !important;
     color: #FFF !important;
     padding:10px 10px 10px 20px;
     margin:0px;
@@ -45,19 +43,19 @@ Highlight colours (ie darker rollovers or lighter rollovers)
   }
 
   /* Used in CFG kids section to replace maroon box with aqua coloured box */
-  main hgroup#wb-cont.cfg.cfg-kids p {
-    background-color: #124A49 !important;
+  main hgroup#wb-cont.cfg.cfg-kids.cfg-print p {
+    background-color: var(--color-cfg-aqua-dark) !important;
     color: #FFF !important;   
   }
 
    /*Used in CFG kids section to replace white text with yellow on words in span tag */
-   main hgroup#wb-cont.cfg.cfg-kids p span{
-    color: #FEF9B6 !important;   
+   main hgroup#wb-cont.cfg.cfg-kids.cfg-print p span{
+    color: var(--color-cfg-yellow) !important;   
   }
 
   /* Beige H1 background and puts it in a flex box */
-  main hgroup#wb-cont.cfg h1 {
-    background-color: #EFDFD0 !important;
+  main hgroup#wb-cont.cfg.cfg-print h1 {
+    background-color: var(--color-cfg-beige) !important;
     color:#000 !important;
     padding:10px;
     margin:0px;
@@ -66,27 +64,44 @@ Highlight colours (ie darker rollovers or lighter rollovers)
     font-size: 1.4em !important;
     flex-direction:column;
     justify-content:flex-end;
-    border-bottom:none;
+    border-bottom:none !important;
+    border-image: unset !important;
+    border-image-slice: unset !important;
     -webkit-print-color-adjust: exact !important;    /* For Chrome/Safari */
     print-color-adjust: exact !important;            /* For Firefox/Edge/Chrome */    
   }
 
   /*Used in CFG kids section to replace beige with yellow background */
-  main hgroup#wb-cont.cfg.cfg-kids h1 {
-    background-color: #FEF9B6 !important;
+  main hgroup#wb-cont.cfg.cfg-kids.cfg-print h1 {
+    background-color: var(--color-cfg-yellow) !important;
   }
 
 
   main .cfg-print {
     font-size: 1.0rem !important;  
   }
-  main .cfg-print h2 {
+  main .cfg-print h2, main .cfg-print .h2 {
     font-size: 1.4rem !important; 
   }
+  main .cfg-print h3, main .cfg-print .h3 {
+    font-size: 1.3rem !important; 
+  }
+  main .cfg-print h4, main .cfg-print .h4 {
+    font-size: 1.2rem !important; 
+  }
+  main .cfg-print h5, main .cfg-print .h5 {
+    font-size: 1.1rem !important; 
+  }
+  main .cfg-print h6, main .cfg-print .h6 {
+    font-size: 1.0rem !important; 
+  }
 
-  main .cfg-print .h2.cfg-maroon, main .cfg-print .h3.cfg-maroon,main .cfg-print .h4.cfg-maroon,
-  main .cfg-print .h5.cfg-maroon, main .cfg-print .h6.cfg-maroon {
-    color: #7F0034 !important;
+  main .cfg-print .h2.cfg-maroon, main .cfg-print h2.cfg-maroon,
+  main .cfg-print .h3.cfg-maroon, main .cfg-print h3.cfg-maroon,
+  main .cfg-print .h4.cfg-maroon, main .cfg-print h4.cfg-maroon,
+  main .cfg-print .h5.cfg-maroon, main .cfg-print h5.cfg-maroon,
+  main .cfg-print .h6.cfg-maroon, main .cfg-print h6.cfg-maroon {
+    color: var(--color-cfg-maroon) !important;
   }
 
   main .cfg-print div.lst-spcd>ol>li, main .cfg-print div.lst-spcd>ul>li,
@@ -94,208 +109,169 @@ Highlight colours (ie darker rollovers or lighter rollovers)
     margin-bottom: 1px !important;
   } 
 
- 
-  main .cfg-print .bg-cfg-aqua, main .cfg-print.bg-cfg-aqua {
-     background-color: #066F6F !important;
-     color:#FFF;
-   }
-   
+  
   main .cfg-print .bg-cfg-aqua-light, main .cfg-print.bg-cfg-aqua-light {
-     background-color: #B4D4D4 !important;
-   }
-   main .cfg-print .bg-cfg-aqua, main .cfg-print .bg-cfg-aqua-light,
-   main .cfg-print.bg-cfg-aqua, main .cfg-print.bg-cfg-aqua-light {    
+     background-color: var(--color-cfg-aqua-light) !important;
     -webkit-print-color-adjust: exact !important;    /* For Chrome/Safari */
-    print-color-adjust: exact !important;            /* For Firefox/Edge/Chrome */
-  }
+    print-color-adjust: exact !important;            /* For Firefox/Edge/Chrome */     
+   }
 }
 
 /*Replace red underline under H1 with maroon coloured one */
 h1#wb-cont.cfg, hgroup#wb-cont.cfg h1 {
-  border-bottom: 0.18em solid #7F0034;
-  border-image: linear-gradient(to right, #7F0034 71px, transparent 71px);
+  border-bottom: 0.18em solid var(--color-cfg-maroon);
+  border-image: linear-gradient(to right, var(--color-cfg-maroon) 71px, transparent 71px);
+  border-image-slice: 1;
+}
+
+/*Replace red underline under H1 with dark aqua coloured one */
+h1#wb-cont.cfg.cfg-kids, hgroup#wb-cont.cfg.cfg-kids h1 {
+  border-bottom: 0.18em solid var(--color-cfg-aqua-dark);
+  border-image: linear-gradient(to right, var(--color-cfg-aqua-dark) 71px, transparent 71px);
   border-image-slice: 1;
 }
 
 /* Background colours */
 .bg-cfg-maroon {
-  background-color: #7F0034 !important;
-  color: #FFF !important;
+  background-color: var(--color-cfg-maroon);
+  color: #FFF;
 }
 
 .bg-cfg-maroon a {
-  color: #FFF !important;
+  color: #FFF;
 }
 .bg-cfg-maroon a:hover, .bg-cfg-maroon a:focus {
-  color: #B3FFFF !important;
+  color: var(--color-cfg-light-rollover);
 }
 
-
 .bg-cfg-beige {
-  background-color: #EFDFD0!important;
+  background-color: var(--color-cfg-beige);
 }
 
 .bg-cfg-beige a {
-  color: #7F0034 !important;
+  color: var(--color-cfg-maroon);
 }
 
 .bg-cfg-beige a:hover, .bg-cfg-beige a:focus {
-  color: #124A49 !important;
+  color: var(--color-cfg-dark-rollover);
 }
 
 .bg-cfg-aqua {
-  background-color: #066F6F !important;
-  color: #FFF !important;
+  background-color: var(--color-cfg-aqua);
+  color: #FFF;
 }
 
 .bg-cfg-aqua a {
-  color: #FFF !important;
+  color: #FFF;
 }
 
 .bg-cfg-aqua a:hover, .bg-cfg-aqua a:focus {
-  color: #B3FFFF !important;
+  color: var(--color-cfg-light-rollover);
 }
 
 .bg-cfg-aqua-dark {
-  background-color: #124A49;
-  color: #FFF !important;
+  background-color: var(--color-cfg-aqua-dark);
+  color: #FFF;
 }
 
 .bg-cfg-aqua-dark a {
-  color: #FFF !important;
+  color: #FFF;
 }
 
 .bg-cfg-aqua-dark a:hover, .bg-cfg-aqua-dark a:focus {
-  color: #B3FFFF !important;
+  color: var(--color-cfg-light-rollover);
 }
 
 .bg-cfg-aqua-light {
-  background-color: #B4D4D4 !important;
+  background-color: var(--color-cfg-aqua-light);
 }
 
 .bg-cfg-aqua-light a {
-  color:#7F0034 !important;
+  color:var(--color-cfg-maroon);
 }
 
 .bg-cfg-aqua-light a:hover, .bg-cfg-aqua-light a:focus {
-  color: #124A49 !important;
+  color: var(--color-cfg-maroon-darker);
 }
 
 .bg-cfg-yellow {
-  background-color: #FEF9B6 !important;
+  background-color: var(--color-cfg-yellow);
 }
 
 .bg-cfg-yellow a {
-  color: #7F0034 !important;
+  color: var(--color-cfg-aqua-dark);
 }
 
 .bg-cfg-yellow a:hover, .bg-cfg-yellow a:focus {
-color:#124A49 !important;
+color:var(--color-cfg-dark-rollover);
 }
 
 /* Text colours */
-.cfg-maroon {
-  color: #7F0034;
+.cfg-text-maroon {
+  color: var(--color-cfg-maroon);
 }
 
-.cfg-aqua {
-  color: #066F6F;
+.cfg-text-aqua {
+  color: var(--color-cfg-aqua);
 }
 
-.cfg-aqua-dark {
-  color: #124A49;
+.cfg-text-aqua-dark {
+  color: var(--color-cfg-aqua-dark);
 }
 
 /* Borders */
 .cfg-brdr-maroon {
-  border-color:#7F0034 !important;
+  border-color:var(--color-cfg-maroon) !important;
 }
 
 .cfg-brdr {
-  border: 15px solid #7F0034;
+  border: 15px solid var(--color-cfg-maroon);
 }
 
 .cfg-brdr-tp {
-  border-top: 15px solid #7F0034;
+  border-top: 15px solid var(--color-cfg-maroon);
 }
 
 .cfg-brdr-rght {
-  border-right: 15px solid #7F0034;
+  border-right: 15px solid var(--color-cfg-maroon);
 }
 
 .cfg-brdr-bttm {
-  border-bottom: 15px solid #7F0034;
+  border-bottom: 15px solid var(--color-cfg-maroon);
 }
 
 .cfg-brdr-lft {
-  border-left: 15px solid #7F0034;
-}
-
-.cfg-recipes .wb-paginate-pager .pagination>.active>button, .cfg-recipes .wb-paginate-pager .pagination>.active>button:focus, .cfg-recipes .wb-paginate-pager .pagination>.active>button:hover {
-    background: #066F6F !important;
-}
-
-.cfg-recipe-icons li {
-   white-space: nowrap;
-}
-
-.cfg-recipe-icons img {
-    max-height: 40px !important;
-}
-
-.cfg-recipe-icons a {
-    color:#FFF !important;
-}
-
-.cfg-recipe-icons a:hover {
-    text-decoration: none !important;
-}
-
-
-.gc-features .bg-cfg-maroon:hover, .gc-features .bg-cfg-maroon:focus-within {
-    /*background-color: #066F6F;*/
-    /*color: #FFF;*/
-}
-
-.gc-features .bg-cfg-aqua:hover, .gc-features .bg-cfg-aqua:focus-within {
-  /*background-color: #7F0034;*/
-  /*color: #FFF;*/
-}
-
-.gc-features .bg-cfg-beige:hover, .gc-features .bg-cfg-beige:focus-within {
-    /*background-color: #D7C3B0;*/
-    /*color: #FFF;*/
+  border-left: 15px solid var(--color-cfg-maroon);
 }
 
 /* Panel - Maroon */
 .panel-cfg-maroon {
-    border-color: #610229; 
+    border-color: var(--color-cfg-maroon-dark); 
 }
 
 .panel-cfg-maroon>.panel-heading {
     color: #fff;
-    background-color: #7F0034;
-    border-color: #610229;
+    background-color: var(--color-cfg-maroon);
+    border-color: var(--color-cfg-maroon-dark);
 }
 
 .panel-cfg-maroon>.panel-heading+.panel-collapse>.panel-body {
-    border-top-color: #610229;
+    border-top-color: var(--color-cfg-maroon-dark);
 }
 
 .panel-cfg-maroon>.panel-heading .badge {
-    color: #7F0034;
+    color: var(--color-cfg-maroon);
     background-color: #fff;
 }
 
 .panel-cfg-maroon>.panel-footer+.panel-collapse>.panel-body {
-    border-bottom-color: #610229;
+    border-bottom-color: var(--color-cfg-maroon-dark);
 }
 
-
 .btn-cfg-aqua {
-    color: #fff !important;
-    background-color: #066F6F;
-    border-color: #124A49;
+    color: #fff;
+    background-color: var(--color-cfg-aqua);
+    border-color: var(--color-cfg-aqua-dark);
 }
 
 .btn-cfg-aqua.focus,.btn-cfg-aqua:focus, .btn-cfg-aqua:hover,
@@ -304,31 +280,31 @@ color:#124A49 !important;
 .btn-cfg-aqua:active.focus,.btn-cfg-aqua:active:focus,.btn-cfg-aqua:active:hover, 
 .open>.btn-cfg-aqua.dropdown-toggle.focus,.open>.btn-cfg-aqua.dropdown-toggle:focus,
 .open>.btn-cfg-aqua.dropdown-toggle:hover {
-    color: #fff !important;
-    background-color: #124A49;
-    border-color: #000;
+    color: #fff;
+    background-color: var(--color-cfg-aqua-dark);
+    border-color: var(--color-cfg-aqua-darker);
 }
 
 .btn-cfg-aqua.disabled.focus,.btn-cfg-aqua.disabled:focus,.btn-cfg-aqua.disabled:hover,
 .btn-cfg-aqua[disabled].focus,.btn-cfg-aqua[disabled]:focus,.btn-cfg-aqua[disabled]:hover,
 fieldset[disabled] .btn-cfg-aqua.focus,fieldset[disabled] .btn-cfg-aqua:focus,fieldset[disabled] .btn-cfg-aqua:hover {
-    background-color: #066F6F;
-    border-color: #000;
+    background-color: var(--color-cfg-aqua);
+    border-color: var(--color-cfg-aqua-darker);
 }
 
 .btn-cfg-aqua .badge {
-    color: #066F6F;
+    color: var(--color-cfg-aqua);
     background-color: #fff;
 }
 
 .btn-cfg-aqua:visited {
-    color: #fff !important;
+    color: #fff;
 }
 
 .btn-cfg-maroon {
-    color: #fff !important;
-    background-color: #7F0034;
-    border-color: #610229;
+    color: #fff;
+    background-color: var(--color-cfg-maroon);
+    border-color: var(--color-cfg-maroon-dark);
 }
 
 .btn-cfg-maroon.focus,.btn-cfg-maroon:focus, .btn-cfg-maroon:hover,
@@ -337,31 +313,31 @@ fieldset[disabled] .btn-cfg-aqua.focus,fieldset[disabled] .btn-cfg-aqua:focus,fi
 .btn-cfg-maroon:active.focus,.btn-cfg-maroon:active:focus,.btn-cfg-maroon:active:hover, 
 .open>.btn-cfg-maroon.dropdown-toggle.focus,.open>.btn-cfg-maroon.dropdown-toggle:focus,
 .open>.btn-cfg-maroon.dropdown-toggle:hover {
-  color: #fff !important;
-    background-color: #610229;
-    border-color: #3E011A ;
+  color: #fff;
+    background-color: var(--color-cfg-maroon-dark);
+    border-color: var(--color-cfg-maroon-darker);
 }
 
 .btn-cfg-maroon.disabled.focus,.btn-cfg-maroon.disabled:focus,.btn-cfg-maroon.disabled:hover,
 .btn-cfg-maroon[disabled].focus,.btn-cfg-maroon[disabled]:focus,.btn-cfg-maroon[disabled]:hover,
 fieldset[disabled] .btn-cfg-maroon.focus,fieldset[disabled] .btn-cfg-maroon:focus,fieldset[disabled] .btn-cfg-maroon:hover {
-    background-color: #7F0034;
-    border-color: #3E011A;
+    background-color: var(--color-cfg-maroon);
+    border-color: var(--color-cfg-maroon-dark);
 }
 
 .btn-cfg-maroon .badge {
-    color: #7F0034;
+    color: var(--color-cfg-maroon);
     background-color: #fff
 }
 
 .btn-cfg-maroon:visited {
-    color: #fff !important;
+    color: #fff;
 }
 
 .btn-cfg-beige {
     color: #000 !important;
-    background-color: #EFDFD0;
-    border-color: #D7C3B0;
+    background-color: var(--color-cfg-beige);
+    border-color: var(--color-cfg-beige-dark);
 }
 
 .btn-cfg-beige.focus,.btn-cfg-beige:focus, .btn-cfg-beige:hover,
@@ -371,15 +347,15 @@ fieldset[disabled] .btn-cfg-maroon.focus,fieldset[disabled] .btn-cfg-maroon:focu
 .open>.btn-cfg-beige.dropdown-toggle.focus,.open>.btn-cfg-beige.dropdown-toggle:focus,
 .open>.btn-cfg-beige.dropdown-toggle:hover {
     color: #000 !important;
-    background-color: #D7C3B0;
-    border-color: #756864;
+    background-color: var(--color-cfg-beige-dark);
+    border-color: var(--color-cfg-beige-darker);
 }
 
 .btn-cfg-beige.disabled.focus,.btn-cfg-beige.disabled:focus,.btn-cfg-beige.disabled:hover,
 .btn-cfg-beige[disabled].focus,.btn-cfg-beige[disabled]:focus,.btn-cfg-beige[disabled]:hover,
 fieldset[disabled] .btn-cfg-beige.focus,fieldset[disabled] .btn-cfg-beige:focus,fieldset[disabled] .btn-cfg-beige:hover {
-    background-color: #EFDFD0;
-    border-color: #D7C3B0;
+    background-color: var(--color-cfg-beige);
+    border-color: var(--color-cfg-beige-dark);
 }
 
 .btn-cfg-beige .badge {
@@ -392,18 +368,28 @@ fieldset[disabled] .btn-cfg-beige.focus,fieldset[disabled] .btn-cfg-beige:focus,
 }
 
 /*For auto generated pagination, makes the current button maroon */
-.cfg .wb-paginate-pager .pagination>.active>button, .cfg .wb-paginate-pager .pagination>.active>button:focus, .cfg .wb-paginate-pager .pagination>.active>button:hover {
-  background-color: #7F0034 !important;
+.cfg .wb-paginate-pager .pagination>.active>button,
+.cfg .wb-paginate-pager .pagination>.active>button:focus,
+.cfg .wb-paginate-pager .pagination>.active>button:hover {
+  background-color: var(--color-cfg-maroon);
+  border-color: var(--color-cfg-maroon-dark);
 }
 
+/* Gives the currently active list-group-item a maroon background */
 .cfg li .list-group-item.active {
-    color: #fff !important;
-    background-color: #7F0034 !important;
-    border-color: #610229 !important;  
+    color: #fff;
+    background-color: var(--color-cfg-maroon);
+    border-color: var(--color-cfg-maroon-dark);  
 }
 
+.cfg li .list-group-item.active:hover, .cfg li .list-group-item.active:focus {
+    background-color: var(--color-cfg-maroon-dark);
+    border-color: var(--color-cfg-maroon-darker);  
+}
+
+/* Pinterst GC Follow us button */
 .gc-followus ul .pinterest::before {
-    background-image: url("/content/dam/hc-sc/images/working-folder/users/alan/food-guide/pinterest.svg");
+    background-image: url("https://www.canada.ca/content/dam/hc-sc/images/services/food-guide/icons/pinterest.svg");
     background-repeat: no-repeat;
     background-size: cover;
     content: "";
