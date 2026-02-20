@@ -1,28 +1,549 @@
 ---
 {
-  "title": "[Project name]",
-  "description": "Template page for [Project name]",
+  "title": "Canada's food guide (CFG) theme",
+  "description": "Canada's food guide theme",
   "lang": "en",
   "altLangPage": "page-fr.html",
-  "dateModified": "2025-12-16",
+  "dateModified": "2026-02-20",
   "breadcrumbs": [
     {
-      "title": "[Project name]",
+      "title": "Canada's food guide details",
       "link": "../index.html"
     }
   ],
-  "css": "../src/main.css",
-  "script": [
-    {
-      "src": "../src/main.js"
-    }
-  ]
+  "css": "../src/main.css"
 }
 ---
 
-<p>{{page.description}}</p>
+<h1 id="wb-cont" class="cfg">Canada's food guide (CFG) theme</h1>
+<p>The colours offered by this theme aim to match the branding of Canada's food guide which uses maroon as a primary colour and several other secondary colours.</p>
+<p>Sponsor: Alan Carter on behalf of Health Canada - Web publishing team.</p>
+<p>Accessibility statement: These colours meet the colour contrast requirements as outlined in WCAG 2.1 AA Success Criterion 1.4.3: Contrast (Minimum) and where validated using the Colour Contrast Analyser program. I can certified that the color matches used in this thematic are meeting a contrast ratio of at least 4.5:1 for normal text and 3:1 for large text and also a contrast ratio of at least 3:1 for graphics and user interface components. I did my due diligence and to knowledge and from my understanding, all elements of this thematic are meeting WCAG 2.1 AA standards. Tested by Alan Carter, alan.carter at hc-sc.gc.ca. 2026-02-20.</p>
+<p>Progressive enhancement notes:</p>
+<ul>
+<li>The <code>bg-cfg-maroon</code>, <code>bg-cfg-aqua</code> and <code>bg-cfg-aqua-dark</code> classes must be accompanied with another dark contrast background colour such as <code>bg-dark</code> and with <code>text-white</code> colour to ensure sufficient contrast between text and background.</li>
+<li>The <code>bg-cfg-beige</code>, <code>bg-cfg-aqua-light</code> and <code>bg-cfg-yellow</code> classes must be used with standard text colour to ensure sufficient contrast between text and background.</li>
+<li>The <code>.btn-cfg-maroon</code>, <code>.btn-cfg-aqua</code> and <code>.btn-cfg-beige</code> button classes must be accompanied with a fall back button class such as <code>.btn-default</code> or <code>btn-primary</code>.</li>
+<li>The <code>.panel-cfg-maroon</code> class must be accompanied with a fall back color such as <code>panel-default</code>.</li>
+</ul>
 
-<div class="mybackground">
-  <p>Hello world</p>
+
+
+<h2>CSS classes</h2>
+<ul>
+<li><a href="#background-colours">Background colours</a>:
+<ul>
+<li><code>.bg-cfg-maroon</code></li>
+<li><code>.bg-cfg-beige</code></li>
+<li><code>.bg-cfg-aqua-light</code></li>
+<li><code>.bg-cfg-aqua</code></li>
+<li><code>.bg-cfg-aqua-dark</code></li>
+<li><code>.bg-cfg-yellow</code></li>
+</ul></li>
+<li><a href="#colours">Colours</a>:
+<ul>
+<li><code>.cfg-text-maroon</code></li>
+<li><code>.cfg-text-aqua</code></li>
+<li><code>.cfg-text-aqua-dark</code></li>
+</ul></li>
+<li><a href="#buttons">Buttons</a>:
+<ul>
+<li><code>.btn-cfg-maroon</code></li>
+<li><code>.btn-cfg-aqua</code></li>
+<li><code>.btn-cfg-beige</code></li>
+</ul></li>
+<li><a href="#borders">Borders</a>:
+<ul>
+<li><code>.cfg-brdr-maroon</code></li>
+<li><code>.cfg-brdr</code></li>
+<li><code>.cfg-brdr-tp</code></li>
+<li><code>.cfg-brdr-rght</code></li>
+<li><code>.cfg-brdr-bttm</code></li>
+<li><code>.cfg-brdr-lft</code></li>
+</ul></li>
+<li><a href="#panels">Panels</a>:
+<ul>
+<li><code>.panel-cfg-maroon</code></li>
+</ul></li>
+<li><a href="#other">Other styles</a>:
+<ul>
+<li><code>.cfg</code></li>
+<li><code>.cfg-kids</code></li>
+<li><code>.gc-followus .pinterest</code></li>
+</ul></li>
+<li><a href="#print">Print styles</a>:
+<ul>
+<li><code>.cfg-print</code></li>
+</ul></li>
+</ul>
+
+
+
+
+<h2 id="background-colours">Background colours</h2>
+<p>These background colours match the branding associated with Canada's food guide. The maroon is the primary colour for most of the Canada's food guide products. The other colours are used to highlight or accent other graphical elements.</p>
+<h3>Examples</h3>
+<div class="row wb-eqht-grd">
+    <div class="col-sm-4 hght-inhrt">
+        <div class="well well-sm  hght-inhrt bg-dark bg-cfg-maroon text-white">
+            <h4 class="mrgn-tp-sm">Heading</h4>
+            <p class="mrgn-bttm-0">This section is styled with:</p>
+            <ul class="list-unstyled mrgn-bttm-0">
+               <li><code>.bg-cfg-maroon</code></li>
+               <li><code>.bg-dark</code></li>
+               <li><code>.text-white</code></li></ul>
+            <p><a href="#">Hyperlink example</a></p>
+        </div>
+    </div>
+        <div class="col-sm-4 hght-inhrt">
+        <div class="well well-sm hght-inhrt bg-cfg-beige">
+            <h4 class="mrgn-tp-sm">Heading</h4>
+            <p>This section is styled with<br><code>.bg-cfg-beige</code>.</p>
+            <p><a href="#">Hyperlink example</a></p>
+        </div>  
+    </div> 
+    <div class="col-sm-4 hght-inhrt">
+        <div class="well well-sm hght-inhrt bg-cfg-aqua-light">
+            <h4 class="mrgn-tp-sm">Heading</h4>
+            <p class="mrgn-bttm-0">This section is styled with:</p>
+            <ul class="list-unstyled mrgn-bttm-0">
+               <li><code>.bg-cfg-aqua-light</code></li></ul>
+            <p><a href="#">Hyperlink example</a></p>
+        </div>  
+    </div>      
+    <div class="col-sm-4 hght-inhrt">
+        <div class="well well-sm hght-inhrt bg-dark bg-cfg-aqua text-white">
+            <h4 class="mrgn-tp-sm">Heading</h4>
+            <p class="mrgn-bttm-0">This section is styled with:</p>
+            <ul class="list-unstyled mrgn-bttm-0">
+               <li><code>.bg-cfg-aqua</code></li>
+               <li><code>.bg-dark</code></li>
+               <li><code>.text-white</code></li></ul>
+            <p><a href="#">Hyperlink example</a></p>
+        </div>  
+    </div>          
+    <div class="col-sm-4 hght-inhrt">
+        <div class="well well-sm hght-inhrt bg-dark bg-cfg-aqua-dark text-white">
+            <h4 class="mrgn-tp-sm">Heading </h4>
+            <p class="mrgn-bttm-0">This section is styled with:</p>
+            <ul class="list-unstyled mrgn-bttm-0">
+               <li><code>.bg-cfg-aqua-dark</code></li>
+               <li><code>.bg-dark</code></li>
+               <li><code>.text-white</code></li></ul>
+            <p><a href="#">Hyperlink example</a></p>
+        </div>  
+    </div>   
+    <div class="col-sm-4 hght-inhrt">
+        <div class="well well-sm hght-inhrt bg-cfg-yellow">
+            <h4 class="mrgn-tp-sm">Heading</h4>
+            <p>This section is styled with<br><code>.bg-cfg-yellow</code>.</p>
+            <p><a href="#">Hyperlink example</a></p>
+        </div>  
+    </div> 
 </div>
+<h3>Code</h3>
+<pre><code>&lt;div class=&quot;bg-cfg-maroon bg-dark text-white&quot;&gt;Example&lt;/div&gt;
+&lt;div class=&quot;bg-cfg-beige&quot;&gt;Example&lt;/div&gt;
+&lt;div class=&quot;bg-cfg-aqua-light&quot;&gt;Example&lt;/div&gt;
+&lt;div class=&quot;bg-cfg-aqua bg-dark text-white&quot;&gt;Example&lt;/div&gt;
+&lt;div class=&quot;bg-cfg-aqua-dark bg-dark text-white&quot;&gt;Example&lt;/div&gt;
+&lt;div class=&quot;bg-cfg-yellow&quot;&gt;Example&lt;/div&gt;</code></pre>
+
+
+
+
+<h2 id="colours">Colours</h2>
+<p>These colours are used to match the branding colours found in the Canada's food guide - style guide.</p>
+<h3>Examples</h3>
+<p class="cfg-text-maroon">.cfg-text-maroon</p>
+<p class="cfg-text-aqua">.cfg-text-aqua</p>
+<p class="cfg-text-aqua-dark">.cfg-text-aqua-dark</p>
+<h3>Code</h3>
+<pre><code>&lt;p class="cfg-text-maroon"&gt;This is maroon text&lt;/p&gt;
+&lt;p class="cfg-text-aqua"&gt;This is aqua text&lt;/p&gt;
+&lt;p class="cfg-text-aqua-dark"&gt;This is dark aqua text&lt;/p&gt;
+</code></pre>
+
+
+
+
+<h2 id="buttons">Buttons</h2>
+<p>These buttons match the branding colours found in the Canada's food guide - style guide.</p>
+<h3>Examples</h3>
+
+<div class="row">
+  <div class="col-xs-6">
+      <div class="input-group">
+          <input type="text" class="form-control p-2" placeholder="Search" />
+          <span class="input-group-btn">
+             <button class="btn btn-default btn-cfg-maroon" type="button">Search</button>
+            </span>
+        </div>
+     </div>
+
+   <div class="col-sm-3"> <button class="btn btn-default btn-cfg-maroon" type="button">Maroon button <span class="badge">10</span></button>
+   </div>
+
+   <div class="col-sm-3"> <a class="btn btn-default btn-cfg-maroon" href="#">Maroon link <span class="badge">10</span></a>
+   </div>
+</div>
+
+<div class="row mrgn-tp-lg">
+  <div class="col-xs-6">
+      <div class="input-group">
+          <input type="text" class="form-control p-2" placeholder="Search" />
+          <span class="input-group-btn">
+             <button class="btn btn-default btn-cfg-aqua" type="button">Search</button>
+            </span>
+        </div>
+     </div>
+
+   <div class="col-sm-3"> <button class="btn btn-default btn-cfg-aqua" type="button">Aqua button <span class="badge">10</span></button>
+   </div>
+
+   <div class="col-sm-3"> <a class="btn btn-default btn-cfg-aqua" href="#">Aqua link <span class="badge">10</span></a>
+   </div>
+</div>
+
+<div class="row mrgn-tp-lg">
+  <div class="col-xs-6">
+      <div class="input-group">
+          <input type="text" class="form-control p-2" placeholder="Search" />
+          <span class="input-group-btn">
+             <button class="btn btn-default btn-cfg-beige" type="button">Search</button>
+            </span>
+        </div>
+     </div>
+
+   <div class="col-sm-3"> <button class="btn btn-default btn-cfg-beige" type="button">Beige button <span class="badge">10</span></button>
+   </div>
+
+   <div class="col-sm-3"> <a class="btn btn-default btn-cfg-beige" href="#">Beige link <span class="badge">10</span></a>
+   </div>
+</div>
+
+<h3>Code</h3>
+<pre><code>&lt;!--Maroon themed buttons--&gt;
+&lt;button class=&quot;btn btn-default btn-cfg-maroon&quot; type=&quot;button&quot;&gt;Maroon button &lt;span class=&quot;badge&quot;&gt;10&lt;/span&gt;&lt;/button&gt;
+&lt;a class=&quot;btn btn-default btn-cfg-maroon&quot; href=&quot;#&quot;&gt;Maroon link &lt;span class=&quot;badge&quot;&gt;10&lt;/span&gt;&lt;/a&gt;
+
+&lt;!--Aqua themed buttons--&gt;
+&lt;button class=&quot;btn btn-default btn-cfg-aqua&quot; type=&quot;button&quot;&gt;Aqua button &lt;span class=&quot;badge&quot;&gt;10&lt;/span&gt;&lt;/button&gt;
+&lt;a class=&quot;btn btn-default btn-cfg-aqua&quot; href=&quot;#&quot;&gt;Aqua link &lt;span class=&quot;badge&quot;&gt;10&lt;/span&gt;&lt;/a&gt;
+
+&lt;!--Beige themed buttons--&gt;
+&lt;button class=&quot;btn btn-default btn-cfg-beige&quot; type=&quot;button&quot;&gt;Beige button &lt;span class=&quot;badge&quot;&gt;10&lt;/span&gt;&lt;/button&gt;
+&lt;a class=&quot;btn btn-default btn-cfg-beige&quot; href=&quot;#&quot;&gt;Beige link &lt;span class=&quot;badge&quot;&gt;10&lt;/span&gt;&lt;/a&gt;</code></pre>
+
+
+
+<h2 id="borders">Borders</h2>
+<p>These maroon coloured borders match the branding theme of Canada's food guide. These would typically be used on images, containers, and wells.</p>
+<h3>Examples</h3>
+<div class="row wb-eqht-grd">
+    <div class="col-xs-6 col-sm-4 hght-inhrt"><div class="well cfg-brdr-maroon"><code>.cfg-brdr-maroon</code></div></div>
+    <div class="col-xs-6 col-sm-4 hght-inhrt"><div class="well cfg-brdr"><code>.cfg-brdr</code></div></div>
+    <div class="col-xs-6 col-sm-4 hght-inhrt"><div class="well cfg-brdr-tp"><code>.cfg-brdr-tp</code></div></div>
+    <div class="col-xs-6 col-sm-4 hght-inhrt"><div class="well cfg-brdr-rght"><code>.cfg-brdr-rght</code></div></div>
+    <div class="col-xs-6 col-sm-4 hght-inhrt"><div class="well cfg-brdr-bttm"><code>.cfg-brdr-bttm</code></div></div>
+    <div class="col-xs-6 col-sm-4 hght-inhrt"><div class="well cfg-brdr-lft"><code>.cfg-brdr-lft</code></div></div>
+</div>
+<h3>Code</h3>
+<pre><code>&lt;div class=&quot;well cfg-brdr-maroon&quot;&gt;Container&lt;/div&gt;
+&lt;div class=&quot;well cfg-brdr&quot;&gt;Container&lt;/div&gt;
+&lt;div class=&quot;well cfg-brdr-tp&quot;&gt;Container&lt;/div&gt;
+&lt;div class=&quot;well cfg-brdr-rght&quot;&gt;Container&lt;/div&gt;
+&lt;div class=&quot;well cfg-brdr-bttm&quot;&gt;Container&lt;/div&gt;
+&lt;div class=&quot;well cfg-brdr-lft&quot;&gt;Container&lt;/div&gt;</code></pre>
+
+
+
+
+<h2 id="panels">Panels</h2>
+<p>Use to spotlight or highlight information using the maroon colour in Canada's food guide.</p>
+<h3>Examples</h3>
+<div class="row wb-eqht-grd mrgn-tp-lg">
+<div class="col-sm-6 mrgn-bttm-md hght-inhrt">
+<div class="panel panel-default panel-cfg-maroon hght-inhrt mrgn-bttm-0">
+	<header class="panel-heading">
+		<h3 class="panel-title h5">Panel title <span class="badge">Badge</span</h3>
+	</header>
+	<div class="panel-body">
+		<p>Panel content</p>
+		<ul>
+		    <li>content goes here</li>
+		    <li>content goes here</li>
+		    <li>content goes here</li>
+		</ul>
+	</div>
+        <footer class="panel-footer">Panel footer</footer>
+</div>
+</div>
+<div class="col-sm-6 mrgn-bttm-md hght-inhrt">
+<div class="panel panel-default panel-cfg-maroon hght-inhrt mrgn-bttm-0">
+	<div class="panel-body">
+              <p>Panel content</p>
+		<ul>
+		    <li>content goes here</li>
+		    <li>content goes here</li>
+		    <li>content goes here</li>
+		</ul>
+	</div>
+</div>
+</div>
+</div>
+
+<h3 class="mrgn-tp-sm">Code</h3>
+<pre><code>&lt;section class=&quot;panel panel-default panel-cfg-maroon&quot;&gt;
+	&lt;header class=&quot;panel-heading&quot;&gt;
+		&lt;h3 class=&quot;panel-title h5&quot;&gt;Panel title &lt;span class=&quot;badge&quot;&gt;Badge&lt;/span&lt;/h3&gt;
+	&lt;/header&gt;
+	&lt;div class=&quot;panel-body&quot;&gt;
+		&lt;p&gt;Panel content&lt;/p&gt;
+		&lt;ul&gt;
+		    &lt;li&gt;content goes here&lt;/li&gt;
+		    &lt;li&gt;content goes here&lt;/li&gt;
+		    &lt;li&gt;content goes here&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/div&gt;
+        &lt;footer class=&quot;panel-footer&quot;&gt;Panel footer&lt;/footer&gt;
+&lt;/section&gt;</code></pre>
+
+
+
+
+
+  <h2 id="other">Other styles</h2>
+<h3>Canada's food guide theme <code>.cfg</code></h3>
+<p>This style can be used on a container to influence the styling of it's contents to adopt the Canada's food guide themed maroon colour on various elements outlined below.</p>
+<h4>H1 header tag</h4>
+<p>Applies a maroon underline under the standard H1 title of the page. This can be applied to either the <code>&lt;h1&gt;</code> or the <code>&lt;hgroup&gt;</code> containing the stacked H1.</p>
+<h5>Example</h5>
+<p>The example has been applied to the <code>&lt;h1&gt;</code> element of this page.</p>
+<h5>Code</h5>
+<pre><code>&lt;h1 id=&quot;wb-cont&quot; class=&quot;cfg&quot;&gt;Canada's food guide (CFG) theme&lt;/h1&gt;
+
+&lt;hgroup id=&quot;wb-cont&quot; class=&quot;cfg cfg-print&quot;&gt;
+	&lt;p&gt;Canada's food guide&lt;/p&gt;
+	&lt;h1&gt;Baked blueberry and banana oatmeal&lt;/h1&gt;
+&lt;/hgroup&gt;</code></pre>
+<h4>List group items</h4>
+<p>Overrides the default colour on the active list-group-item to a maroon background.</p>
+<h5>Example</h5>
+<ul class="toc lst-spcd col-md-12 cfg">
+			<li class="col-md-4 col-sm-6 parent-item text-white"> <a href="#" class="list-group-item parent-link active">Active item#1</a> </li>
+			<li class="col-md-4 col-sm-6"> <a href="#" class="list-group-item">Item#2</a></li>
+			<li class="col-md-4 col-sm-6"> <a href="#" class="list-group-item">Item#3</a></li>
+		</ul>
+<h5>Code</h5>
+<pre><code>&lt;ul class=&quot;toc lst-spcd col-md-12 cfg&quot;&gt;
+    &lt;li class=&quot;col-md-4 col-sm-6 parent-item text-white&quot;&gt; &lt;a href=&quot;#&quot; class=&quot;list-group-item parent-link active&quot;&gt;Active item#1&lt;/a&gt; &lt;/li&gt;
+    &lt;li class=&quot;col-md-4 col-sm-6&quot;&gt; &lt;a href=&quot;#&quot; class=&quot;list-group-item&quot;&gt;Item#2&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;col-md-4 col-sm-6&quot;&gt; &lt;a href=&quot;#&quot; class=&quot;list-group-item&quot;&gt;Item#3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+<h4>Pagination</h4>
+<p>Adds the Canada's food guide maroon colour to the active button in the pagination at the bottom of a list of items. The class must be applied on the parent container of the container that has <code>.wb-paginate</code> applied to it.</p>
+<h5>Example</h5>
+<div class="cfg">
+<ul class="wb-paginate" data-wb-paginate='{ "itemsPerPage": 3 }'>
+	<li>List item #1</li>
+	<li>List item #2</li>
+	<li>List item #3</li>
+	<li>List item #4</li>
+	<li>List item #5</li>
+</ul>
+</div>
+<h5>Code</h5>
+<pre><code>&lt;div class=&quot;cfg&quot;&gt;
+    &lt;ul class=&quot;wb-paginate&quot; data-wb-paginate='{ &quot;itemsPerPage&quot;: 3 }'&gt;
+	&lt;li&gt;List item #1&lt;/li&gt;
+	&lt;li&gt;List item #2&lt;/li&gt;
+	&lt;li&gt;List item #3&lt;/li&gt;
+	&lt;li&gt;List item #4&lt;/li&gt;
+	&lt;li&gt;List item #5&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+
+<h3>Canada's food guide - kids theme <code>.cfg-kids</code></h3>
+<p>Canada's food guide also has a guide aimed at kids which uses a different colour scheme. Currently this style adjusts the formatting of the underline that appears under the H1 and impacts the print style sheet.</p>
+<h4>Example</h4>
+<section>
+<h1 id="wb-cont" class="cfg cfg-kids"  headingoffset ="4">Canada's food guide kids theme</h1>
+</section>
+<h4>Code</h4>
+<pre><code>&lt;h1 id=&quot;wb-cont&quot; class=&quot;cfg cfg-kids&quot;&gt;Canada's food guide kids theme&lt;/h1&gt;
+
+&lt;hgroup id=&quot;wb-cont&quot; class=&quot;cfg cfg-kids cfg-print&quot;&gt;
+    &lt;p&gt;Canada's food guide &lt;span&gt;kids&lt;/span&gt;&lt;/p&gt;
+    &lt;h1&gt;Toolkit for educators: Activities for ages 4 to 6&lt;/h1&gt;
+&lt;/hgroup&gt;</code></pre>
+<h3>Pinterest<code>.gc-followus .pinterest</code></h3>
+<p>A Pinterest social media channel icon for sharing recipes and cooking skills found on Canada's food guide.</p>
+<h4>Example</h4>
+<div class="gc-followus">
+<p class="h5 mrgn-tp-0 mrgn-bttm-0">Share this page</p>
+	<ul class="list-inline">
+		<li><a href="#" rel="external" class="pinterest"><span class="wb-inv">Pinterest</span></a></li>
+	</ul>
+</div>
+<h4>Code</h4>
+<pre><code>&lt;section class=&quot;gc-followus&quot;&gt;
+  &lt;p class=&quot;h5&quot;&gt;Share this recipe&lt;/p&gt;
+  &lt;ul class=&quot;list-inline&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot; rel=&quot;external&quot; class=&quot;pinterest&quot;&gt;&lt;span class=&quot;wb-inv&quot;&gt;Pinterest&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/section&gt;</code></pre>
+
+
+
+
+<h2 id="print">Print styles <code>.cfg-print</code></h2>
+<p>Canada's food guide contains sections that are designed to be printed out in a printer friendly brochure format such as recipes that can fit on 2 printable pages and require customized print styles to replace PDF versions. These styles format the H1 header title block using a different format that aligns with their print media and shrinks the print size and margins on some elements.</p>
+<p>This section can be tested by going to "Print preview" in your current web browser.</p>
+<h3> Header block <code>.cfg-print</code></h3>
+<p>Applying the <code>.cfg-print</code> class to the <code>&lt;hgroup&gt;</code> containing the <code>&lt;h1&gt;</code> title will apply the Canada's food guide print style for it. If the section is related to the Canada's food guide kids section which uses a different colour scheme then we can add the class <code>.cfg-kids</code> to change this.</p>
+<h4>Examples:</h4>
+<section>
+<hgroup id="wb-cont" class="cfg cfg-print">
+	<p>Canada's food&nbsp;guide</p>
+	<h1 headingoffset ="4">Baked blueberry and banana oatmeal</h1>
+</hgroup>
+</section>
+<section>
+<hgroup id="wb-cont" class="cfg cfg-kids cfg-print ">
+	<p>Canada's food&nbsp;guide <span>kids</span></p>
+	<h1 headingoffset ="4">Toolkit for educators: Activities for ages 4 to 6</h1>
+</hgroup>
+</section>
+<h4>Code</h4>
+<pre><code>&lt;hgroup id=&quot;wb-cont&quot; class=&quot;cfg cfg-print&quot;&gt;
+    &lt;p&gt;Canada's food&amp guide&lt;/p&gt;
+    &lt;h1&gt;Baked blueberry and banana oatmeal&lt;/h1&gt;
+&lt;/hgroup&gt;
+
+&lt;hgroup id=&quot;wb-cont&quot; class=&quot;cfg cfg-kids cfg-print&quot;&gt;
+    &lt;p&gt;Canada's food guide &lt;span&gt;kids&lt;/span&gt;&lt;/p&gt;
+    &lt;h1&gt;Toolkit for educators: Activities for ages 4 to 6&lt;/h1&gt;
+&lt;/hgroup&gt;</code></pre>
+<h3>Text content <code>.cfg-print</code></h3>
+<h4>Examples</h4>
+<p>For certain sections on Canada's food guide where the desired outcome is to have a printer friendly version of a page to appear more like a brochure or print publication we can apply the <code>.cfg-print</code> class to a container which will force the contents of that container to print in a smaller size, shrink some spacing, and force some background colours to print.</p>
+<div class="row cfg-print wb-eqht-grd">
+<div class="col-md-6 hght-inhrt">
+<section>
+<h2 class="cfg-maroon">H2 maroon heading</h2>
+<h3 class="cfg-maroon">H3 maroon heading</h3>
+<h4 class="cfg-maroon">H4 maroon heading</h4>
+<h5 class="cfg-maroon">H5 maroon heading</h5>
+</section>
+<h5 class="brdr-bttm h3">Print functionality <code>&lt;ul&gt;</code></h5>
+<ul class="lst-spcd">
+<li>Item #1 - description</li>
+<li>Item#2 - description</li>
+<li>Item#3 - description</li>
+<li>Item#4 - description</li>
+</ul>
+</div>
+<div class="col-sm-6 hght-inhrt">
+<h5 class="brdr-bttm h3">Print functionality <code>&lt;ol&gt;</code></h5>
+<ol class="lst-spcd">
+<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+<li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+<li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</li>
+<li>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li></ol>
+</div>
+</div>
+<div class="row cfg-print wb-eqht-grd">
+<div class="col-xs-12">
+<h5 class="brdr-bttm h3">Print functionality - Background colours</h5>
+</div>
+<div class="col-xs-6 col-sm-4 hght-inhrt">
+<section class="well well-sm bg-cover bg-cfg-maroon bg-dark text-white">
+<h6 class="mrgn-tp-sm h5">Print functionality <code>.bg-cfg-maroon</code></h6>
+<p>Expected result:</p>
+<ul>
+<li>Screen: Maroon coloured background / white text</li>
+<li>Print: White background / black text</li>
+</ul></p>
+</section>
+</div>
+<div class="col-xs-6 col-sm-4 hght-inhrt">
+<section class="well well-sm bg-cover bg-cfg-beige">
+<h6 class="mrgn-tp-sm h5">Print functionality <code>.bg-cfg-beige</code></h6>
+<p>Expected result:</p>
+<ul>
+<li>Screen: Beige coloured background / black text</li>
+<li>Print: White background / black text</li>
+</ul></p>
+</section>
+</div>
+
+<div class="col-xs-6 col-sm-4 hght-inhrt">
+<section class="well well-sm bg-cover bg-cfg-aqua-light">
+<h6 class="mrgn-tp-sm h5">Print functionality  <code>.bg-cfg-aqua-light</code></h6>
+<p>Expected result:</p>
+<ul>
+<li>Screen: Light Aqua coloured background / black text</li>
+<li>Print: Light Aqua coloured background / black text</li>
+</ul></p>
+</section>
+</div>
+
+<div class="col-xs-6 col-sm-4 hght-inhrt">
+<section class="well well-sm bg-cover bg-cfg-aqua bg-dark text-white">
+<h6 class="mrgn-tp-sm h5">Print functionality <code>.bg-cfg-aqua</code></h6>
+<p>Expected result:</p>
+<ul>
+<li>Screen: Aqua coloured background / white text</li>
+<li>Print: White background / black text</li>
+</ul></p>
+</section>
+</div>
+
+<div class="col-xs-6 col-sm-4 hght-inhrt">
+<section class="well well-sm bg-cover bg-cfg-aqua-dark bg-dark text-white">
+<h6 class="mrgn-tp-sm h5">Print functionality <code>.bg-cfg-aqua-dark</code></h6>
+<p>Expected result:</p>
+<ul>
+<li>Screen: Dark Aqua coloured background / white text</li>
+<li>Print: White background / black text</li>
+</ul></p>
+</section>
+</div>
+
+<div class="col-xs-6 col-sm-4 hght-inhrt">
+<section class="well well-sm bg-cover bg-cfg-yellow">
+<h6 class="mrgn-tp-sm h5">Print functionality <code>.bg-cfg-yellow</code></h6>
+<p>Expected result:</p>
+<ul>
+<li>Screen: Yellow coloured background / black text</li>
+<li>Print: White background / black text</li>
+</ul></p>
+</section>
+</div>
+</div>
+<h4>Code</h4>
+<pre><code>&lt;div class=&quot;cfg-print&quot;&gt;
+    &lt;h2&gt;h2 heading&lt;/h2&gt;
+    &lt;h3&gt;h2 heading&lt;/h3&gt;
+    &lt;h4&gt;h2 heading&lt;/h4&gt;
+    &lt;h5&gt;h2 heading&lt;/h5&gt;
+    &lt;h6&gt;h2 heading&lt;/h6&gt;
+    &lt;p&gt;Sample paragraph&lt;/p&gt;
+    &lt;ul&gt;
+        &lt;li&gt;Sample list item#1&lt;/li&gt;
+        &lt;li&gt;Sample list item#2&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;ol&gt;
+        &lt;li&gt;Sample list item#1&lt;/li&gt;
+        &lt;li&gt;Sample list item#2&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;h2&gt;Sample background colours&lt;/h2&gt;
+    &lt;div class=&quot;bg-cfg-maroon bg-dark text-white&quot;&gt;Example&lt;/div&gt;
+    &lt;div class=&quot;bg-cfg-beige&quot;&gt;Example&lt;/div&gt;
+    &lt;div class=&quot;bg-cfg-aqua-light&quot;&gt;Example&lt;/div&gt;
+    &lt;div class=&quot;bg-cfg-aqua bg-dark text-white&quot;&gt;Example&lt;/div&gt;
+    &lt;div class=&quot;bg-cfg-aqua-dark bg-dark text-white&quot;&gt;Example&lt;/div&gt;
+    &lt;div class=&quot;bg-cfg-yellow&quot;&gt;Example&lt;/div&gt;
+&lt;/div&gt;</code></pre>
 
