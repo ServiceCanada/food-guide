@@ -8,8 +8,8 @@ module.exports = function(grunt) {
 
 		uglify: {
 			options: {
-				banner: '/*!\n * [Project name] / [Nom du project]\n' +
-				' * @license https://github.com/ServiceCanada/[project-name]/?tab=MIT-1-ov-file\n' +
+				banner: '/*!\n * Canada\'s food guide / Guide alimentaire canadien\n' +
+				' * @license https://github.com/ServiceCanada/food-guide/?tab=MIT-1-ov-file\n' +
 				' * v<%= pkg.version %> - ' + '<%= grunt.template.today("yyyy-mm-dd") %>\n*/'
 			},
 
@@ -32,8 +32,8 @@ module.exports = function(grunt) {
 			taskName: {
 				options: {
 					position: 'top',
-					banner: '/*!\n * [Project name] / [Nom du projet]\n' +
-					' * @license https://github.com/ServiceCanada/[project-name]/?tab=MIT-1-ov-file\n' +
+					banner: '/*!\n * Canada\'s food guide / Guide alimentaire canadien\n' +
+					' * @license https://github.com/ServiceCanada/food-guide/?tab=MIT-1-ov-file\n' +
 					' * v<%= pkg.version %> - ' + '<%= grunt.template.today("yyyy-mm-dd") %>\n*/',
 					linebreak: true
 				},
