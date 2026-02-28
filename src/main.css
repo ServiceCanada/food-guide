@@ -43,18 +43,23 @@
   }
 
   /* Used in CFG kids section to replace maroon box with aqua coloured box */
-  main hgroup#wb-cont.cfg.cfg-kids.cfg-print p {
+  main hgroup#wb-cont.cfg-kids.cfg-print p {
     background-color: var(--color-cfg-aqua-dark) !important;
     color: #FFF !important;   
   }
 
+   main hgroup#wb-cont.cfg-print p > span, main hgroup#wb-cont.cfg-kids.cfg-print p > span {
+    color: #FFF !important;
+  }
+
    /*Used in CFG kids section to replace white text with yellow on words in span tag */
-   main hgroup#wb-cont.cfg.cfg-kids.cfg-print p span{
+   main hgroup#wb-cont.cfg-kids.cfg-print p > span.cfg-kids {
+    background-color: var(--color-cfg-aqua-dark) !important;
     color: var(--color-cfg-yellow) !important;   
   }
 
   /* Beige H1 background and puts it in a flex box */
-  main hgroup#wb-cont.cfg.cfg-print h1 {
+  main hgroup#wb-cont.cfg-print h1 {
     background-color: var(--color-cfg-beige) !important;
     color:#000 !important;
     padding:10px;
@@ -72,41 +77,51 @@
   }
 
   /*Used in CFG kids section to replace beige with yellow background */
-  main hgroup#wb-cont.cfg.cfg-kids.cfg-print h1 {
+  main hgroup#wb-cont.cfg-kids.cfg-print h1 {
     background-color: var(--color-cfg-yellow) !important;
   }
 
-
   main .cfg-print {
-    font-size: 1.0rem !important;  
+    font-size: 1.1rem !important;  
+  }
+   main .cfg-print h1, main .cfg-print .h1 {
+    font-size: 1.6rem !important; 
   }
   main .cfg-print h2, main .cfg-print .h2 {
-    font-size: 1.4rem !important; 
+    font-size: 1.5rem !important; 
   }
   main .cfg-print h3, main .cfg-print .h3 {
-    font-size: 1.3rem !important; 
+    font-size: 1.4rem !important; 
   }
   main .cfg-print h4, main .cfg-print .h4 {
-    font-size: 1.2rem !important; 
+    font-size: 1.3rem !important; 
   }
   main .cfg-print h5, main .cfg-print .h5 {
-    font-size: 1.1rem !important; 
+    font-size: 1.2rem !important; 
   }
   main .cfg-print h6, main .cfg-print .h6 {
-    font-size: 1.0rem !important; 
+    font-size: 1.1rem !important; 
   }
 
-  main .cfg-print .h2.cfg-maroon, main .cfg-print h2.cfg-maroon,
-  main .cfg-print .h3.cfg-maroon, main .cfg-print h3.cfg-maroon,
-  main .cfg-print .h4.cfg-maroon, main .cfg-print h4.cfg-maroon,
-  main .cfg-print .h5.cfg-maroon, main .cfg-print h5.cfg-maroon,
-  main .cfg-print .h6.cfg-maroon, main .cfg-print h6.cfg-maroon {
+  main .cfg-print .h2.cfg-text-maroon, main .cfg-print h2.cfg-text-maroon,
+  main .cfg-print .h3.cfg-text-maroon, main .cfg-print h3.cfg-text-maroon,
+  main .cfg-print .h4.cfg-text-maroon, main .cfg-print h4.cfg-text-maroon,
+  main .cfg-print .h5.cfg-text-maroon, main .cfg-print h5.cfg-text-maroon,
+  main .cfg-print .h6.cfg-text-maroon, main .cfg-print h6.cfg-text-maroon {
     color: var(--color-cfg-maroon) !important;
+  }
+
+  main .cfg-print .h2.cfg-text-aqua-dark, main .cfg-print h2.cfg-text-aqua-dark,
+  main .cfg-print .h3.cfg-text-aqua-dark, main .cfg-print h3.cfg-text-aqua-dark,
+  main .cfg-print .h4.cfg-text-aqua-dark, main .cfg-print h4.cfg-text-aqua-dark,
+  main .cfg-print .h5.cfg-text-aqua-dark, main .cfg-print h5.cfg-text-aqua-dark,
+  main .cfg-print .h6.cfg-text-aqua-dark, main .cfg-print h6.cfg-text-aqua-dark {
+    color: var(--color-cfg-aqua-dark) !important;
   }
 
   main .cfg-print div.lst-spcd>ol>li, main .cfg-print div.lst-spcd>ul>li,
   main .cfg-print ol.lst-spcd>li, main .cfg-print ul.lst-spcd>li {
-    margin-bottom: 1px !important;
+    margin-bottom: 0px !important;
   } 
 
   
@@ -115,20 +130,6 @@
     -webkit-print-color-adjust: exact !important;    /* For Chrome/Safari */
     print-color-adjust: exact !important;            /* For Firefox/Edge/Chrome */     
    }
-}
-
-/*Replace red underline under H1 with maroon coloured one */
-h1#wb-cont.cfg, hgroup#wb-cont.cfg h1 {
-  border-bottom: 0.18em solid var(--color-cfg-maroon);
-  border-image: linear-gradient(to right, var(--color-cfg-maroon) 71px, transparent 71px);
-  border-image-slice: 1;
-}
-
-/*Replace red underline under H1 with dark aqua coloured one */
-h1#wb-cont.cfg.cfg-kids, hgroup#wb-cont.cfg.cfg-kids h1 {
-  border-bottom: 0.18em solid var(--color-cfg-aqua-dark);
-  border-image: linear-gradient(to right, var(--color-cfg-aqua-dark) 71px, transparent 71px);
-  border-image-slice: 1;
 }
 
 /* Background colours */
@@ -242,6 +243,10 @@ color:var(--color-cfg-dark-rollover);
 
 .cfg-brdr-lft {
   border-left: 15px solid var(--color-cfg-maroon);
+}
+
+.cfg-brdr-lft-box {
+  border-left: 60px solid var(--color-cfg-maroon);
 }
 
 /* Panel - Maroon */
