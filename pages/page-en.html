@@ -4,7 +4,7 @@
   "description": "Canada's food guide theme",
   "lang": "en",
   "altLangPage": "page-fr.html",
-  "dateModified": "2026-02-20",
+  "dateModified": "2026-02-27",
   "breadcrumbs": [
     {
       "title": "Canada's food guide details",
@@ -17,7 +17,7 @@
 
 <p>The colours offered by this theme aim to match the branding of Canada's food guide which uses maroon as a primary colour and several other secondary colours.</p>
 <p>Sponsor: Alan Carter on behalf of Health Canada - Web publishing team.</p>
-<p>Accessibility statement: These colours meet the colour contrast requirements as outlined in WCAG 2.1 AA Success Criterion 1.4.3: Contrast (Minimum) and where validated using the Colour Contrast Analyser program. I can certified that the color matches used in this thematic are meeting a contrast ratio of at least 4.5:1 for normal text and 3:1 for large text and also a contrast ratio of at least 3:1 for graphics and user interface components. I did my due diligence and to knowledge and from my understanding, all elements of this thematic are meeting WCAG 2.1 AA standards. Tested by Alan Carter, alan.carter at hc-sc.gc.ca. 2026-02-20.</p>
+<p>Accessibility statement: These colours meet the colour contrast requirements as outlined in WCAG 2.1 AA Success Criterion 1.4.3: Contrast (Minimum) and where validated using the Colour Contrast Analyser program. I can certified that the color matches used in this thematic are meeting a contrast ratio of at least 4.5:1 for normal text and 3:1 for large text and also a contrast ratio of at least 3:1 for graphics and user interface components. I did my due diligence and to knowledge and from my understanding, all elements of this thematic are meeting WCAG 2.1 AA standards. Tested by Alan Carter, alan.carter at hc-sc.gc.ca. 2026-02-27.</p>
 <p>Progressive enhancement notes:</p>
 <ul>
 <li>The <code>bg-cfg-maroon</code>, <code>bg-cfg-aqua</code> and <code>bg-cfg-aqua-dark</code> classes must be accompanied with another dark contrast background colour such as <code>bg-dark</code> and with <code>text-white</code> colour to ensure sufficient contrast between text and background.</li>
@@ -59,6 +59,7 @@
 <li><code>.cfg-brdr-rght</code></li>
 <li><code>.cfg-brdr-bttm</code></li>
 <li><code>.cfg-brdr-lft</code></li>
+<li><code>.cfg-brdr-lft-box</code></li>
 </ul></li>
 <li><a href="#panels">Panels</a>:
 <ul>
@@ -67,12 +68,12 @@
 <li><a href="#other">Other styles</a>:
 <ul>
 <li><code>.cfg</code></li>
-<li><code>.cfg-kids</code></li>
 <li><code>.gc-followus .pinterest</code></li>
 </ul></li>
 <li><a href="#print">Print styles</a>:
 <ul>
 <li><code>.cfg-print</code></li>
+<li><code>.cfg-kids</code></li>
 </ul></li>
 </ul>
 
@@ -246,6 +247,7 @@
     <div class="col-xs-6 col-sm-4 hght-inhrt"><div class="well cfg-brdr-rght"><code>.cfg-brdr-rght</code></div></div>
     <div class="col-xs-6 col-sm-4 hght-inhrt"><div class="well cfg-brdr-bttm"><code>.cfg-brdr-bttm</code></div></div>
     <div class="col-xs-6 col-sm-4 hght-inhrt"><div class="well cfg-brdr-lft"><code>.cfg-brdr-lft</code></div></div>
+<div class="col-xs-6 col-sm-4 hght-inhrt"><div class="well cfg-brdr-lft-box"><code>.cfg-brdr-lft-box</code></div></div>
 </div>
 <h3>Code</h3>
 <pre><code>&lt;div class=&quot;well cfg-brdr-maroon&quot;&gt;Container&lt;/div&gt;
@@ -253,7 +255,8 @@
 &lt;div class=&quot;well cfg-brdr-tp&quot;&gt;Container&lt;/div&gt;
 &lt;div class=&quot;well cfg-brdr-rght&quot;&gt;Container&lt;/div&gt;
 &lt;div class=&quot;well cfg-brdr-bttm&quot;&gt;Container&lt;/div&gt;
-&lt;div class=&quot;well cfg-brdr-lft&quot;&gt;Container&lt;/div&gt;</code></pre>
+&lt;div class=&quot;well cfg-brdr-lft&quot;&gt;Container&lt;/div&gt;
+&lt;div class=&quot;well cfg-brdr-lft-box&quot;&gt;Container&lt;/div&gt;</code></pre>
 
 
 
@@ -315,17 +318,6 @@
   <h2 id="other">Other styles</h2>
 <h3>Canada's food guide theme <code>.cfg</code></h3>
 <p>This style can be used on a container to influence the styling of it's contents to adopt the Canada's food guide themed maroon colour on various elements outlined below.</p>
-<h4>H1 header tag</h4>
-<p>Applies a maroon underline under the standard H1 title of the page. This can be applied to either the <code>&lt;h1&gt;</code> or the <code>&lt;hgroup&gt;</code> containing the stacked H1.</p>
-<h5>Example</h5>
-<p>The example has been applied to the <code>&lt;h1&gt;</code> element of this page.</p>
-<h5>Code</h5>
-<pre><code>&lt;h1 id=&quot;wb-cont&quot; class=&quot;cfg&quot;&gt;Canada's food guide (CFG) theme&lt;/h1&gt;
-
-&lt;hgroup id=&quot;wb-cont&quot; class=&quot;cfg cfg-print&quot;&gt;
-	&lt;p&gt;Canada's food guide&lt;/p&gt;
-	&lt;h1&gt;Baked blueberry and banana oatmeal&lt;/h1&gt;
-&lt;/hgroup&gt;</code></pre>
 <h4>List group items</h4>
 <p>Overrides the default colour on the active list-group-item to a maroon background.</p>
 <h5>Example</h5>
@@ -363,19 +355,7 @@
     &lt;/ul&gt;
 &lt;/div&gt;</code></pre>
 
-<h3>Canada's food guide - kids theme <code>.cfg-kids</code></h3>
-<p>Canada's food guide also has a guide aimed at kids which uses a different colour scheme. Currently this style adjusts the formatting of the underline that appears under the H1 and impacts the print style sheet.</p>
-<h4>Example</h4>
-<section>
-<h1 id="wb-cont" class="cfg cfg-kids"  headingoffset ="4">Canada's food guide kids theme</h1>
-</section>
-<h4>Code</h4>
-<pre><code>&lt;h1 id=&quot;wb-cont&quot; class=&quot;cfg cfg-kids&quot;&gt;Canada's food guide kids theme&lt;/h1&gt;
 
-&lt;hgroup id=&quot;wb-cont&quot; class=&quot;cfg cfg-kids cfg-print&quot;&gt;
-    &lt;p&gt;Canada's food guide &lt;span&gt;kids&lt;/span&gt;&lt;/p&gt;
-    &lt;h1&gt;Toolkit for educators: Activities for ages 4 to 6&lt;/h1&gt;
-&lt;/hgroup&gt;</code></pre>
 <h3>Pinterest<code>.gc-followus .pinterest</code></h3>
 <p>A Pinterest social media channel icon for sharing recipes and cooking skills found on Canada's food guide.</p>
 <h4>Example</h4>
@@ -399,29 +379,29 @@
 <h2 id="print">Print styles <code>.cfg-print</code></h2>
 <p>Canada's food guide contains sections that are designed to be printed out in a printer friendly brochure format such as recipes that can fit on 2 printable pages and require customized print styles to replace PDF versions. These styles format the H1 header title block using a different format that aligns with their print media and shrinks the print size and margins on some elements.</p>
 <p>This section can be tested by going to "Print preview" in your current web browser.</p>
-<h3> Header block <code>.cfg-print</code></h3>
-<p>Applying the <code>.cfg-print</code> class to the <code>&lt;hgroup&gt;</code> containing the <code>&lt;h1&gt;</code> title will apply the Canada's food guide print style for it. If the section is related to the Canada's food guide kids section which uses a different colour scheme then we can add the class <code>.cfg-kids</code> to change this.</p>
+<h3> Header block <code>.cfg-print</code> <code>.cfg-kids</code></h3>
+<p>Applying the <code>.cfg-print</code> class to the <code>&lt;hgroup&gt;</code> containing the <code>&lt;h1&gt;</code> title will apply the Canada's food guide print style for it. If the section is related to the Canada's food guide kids section which uses a different colour scheme then we can add the class <code>.cfg-kids</code> to the  <code>&lt;hgroup&gt;</code>to change this. Canada's food guide kids section also has one word that should be in a different yellow colour which can be achieved by applying another<code>.cfg-kids</code> class to a <code>&lt;span&gt;</code> tag with the word we want changed.</p>
 <h4>Examples:</h4>
 <section>
-<hgroup id="wb-cont" class="cfg cfg-print">
-	<p>Canada's food&nbsp;guide</p>
+<hgroup id="wb-cont" class="cfg-print">
+	<p>Canada's food guide</p>
 	<h1 headingoffset ="4">Baked blueberry and banana oatmeal</h1>
 </hgroup>
 </section>
 <section>
-<hgroup id="wb-cont" class="cfg cfg-kids cfg-print ">
-	<p>Canada's food&nbsp;guide <span>kids</span></p>
+<hgroup id="wb-cont" class="cfg-kids cfg-print ">
+	<p>Canada's food&nbsp;guide <span class="cfg-kids">kids</span></p>
 	<h1 headingoffset ="4">Toolkit for educators: Activities for ages 4 to 6</h1>
 </hgroup>
 </section>
 <h4>Code</h4>
-<pre><code>&lt;hgroup id=&quot;wb-cont&quot; class=&quot;cfg cfg-print&quot;&gt;
-    &lt;p&gt;Canada's food&amp guide&lt;/p&gt;
+<pre><code>&lt;hgroup id=&quot;wb-cont&quot; class=&quot;cfg-print&quot;&gt;
+    &lt;p&gt;Canada's food guide&lt;/p&gt;
     &lt;h1&gt;Baked blueberry and banana oatmeal&lt;/h1&gt;
 &lt;/hgroup&gt;
 
-&lt;hgroup id=&quot;wb-cont&quot; class=&quot;cfg cfg-kids cfg-print&quot;&gt;
-    &lt;p&gt;Canada's food guide &lt;span&gt;kids&lt;/span&gt;&lt;/p&gt;
+&lt;hgroup id=&quot;wb-cont&quot; class=&quot;cfg-kids cfg-print&quot;&gt;
+    &lt;p&gt;Canada's food guide &lt;span class=&quot;cfg-kids&quot;&gt;kids&lt;/span&gt;&lt;/p&gt;
     &lt;h1&gt;Toolkit for educators: Activities for ages 4 to 6&lt;/h1&gt;
 &lt;/hgroup&gt;</code></pre>
 <h3>Text content <code>.cfg-print</code></h3>
@@ -544,5 +524,6 @@
     &lt;div class=&quot;bg-cfg-aqua bg-dark text-white&quot;&gt;Example&lt;/div&gt;
     &lt;div class=&quot;bg-cfg-aqua-dark bg-dark text-white&quot;&gt;Example&lt;/div&gt;
     &lt;div class=&quot;bg-cfg-yellow&quot;&gt;Example&lt;/div&gt;
+&lt;/div&gt;</code></pre>
 &lt;/div&gt;</code></pre>
 
