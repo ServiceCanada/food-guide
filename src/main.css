@@ -260,17 +260,9 @@ color:var(--color-cfg-dark-rollover);
     border-color: var(--color-cfg-maroon-dark);
 }
 
-.panel-cfg-maroon>.panel-heading+.panel-collapse>.panel-body {
-    border-top-color: var(--color-cfg-maroon-dark);
-}
-
 .panel-cfg-maroon>.panel-heading .badge {
     color: var(--color-cfg-maroon);
     background-color: #fff;
-}
-
-.panel-cfg-maroon>.panel-footer+.panel-collapse>.panel-body {
-    border-bottom-color: var(--color-cfg-maroon-dark);
 }
 
 .btn-cfg-aqua {
@@ -287,13 +279,6 @@ color:var(--color-cfg-dark-rollover);
 .open>.btn-cfg-aqua.dropdown-toggle:hover {
     color: #fff;
     background-color: var(--color-cfg-aqua-dark);
-    border-color: var(--color-cfg-aqua-darker);
-}
-
-.btn-cfg-aqua.disabled.focus,.btn-cfg-aqua.disabled:focus,.btn-cfg-aqua.disabled:hover,
-.btn-cfg-aqua[disabled].focus,.btn-cfg-aqua[disabled]:focus,.btn-cfg-aqua[disabled]:hover,
-fieldset[disabled] .btn-cfg-aqua.focus,fieldset[disabled] .btn-cfg-aqua:focus,fieldset[disabled] .btn-cfg-aqua:hover {
-    background-color: var(--color-cfg-aqua);
     border-color: var(--color-cfg-aqua-darker);
 }
 
@@ -323,13 +308,6 @@ fieldset[disabled] .btn-cfg-aqua.focus,fieldset[disabled] .btn-cfg-aqua:focus,fi
     border-color: var(--color-cfg-maroon-darker);
 }
 
-.btn-cfg-maroon.disabled.focus,.btn-cfg-maroon.disabled:focus,.btn-cfg-maroon.disabled:hover,
-.btn-cfg-maroon[disabled].focus,.btn-cfg-maroon[disabled]:focus,.btn-cfg-maroon[disabled]:hover,
-fieldset[disabled] .btn-cfg-maroon.focus,fieldset[disabled] .btn-cfg-maroon:focus,fieldset[disabled] .btn-cfg-maroon:hover {
-    background-color: var(--color-cfg-maroon);
-    border-color: var(--color-cfg-maroon-dark);
-}
-
 .btn-cfg-maroon .badge {
     color: var(--color-cfg-maroon);
     background-color: #fff
@@ -354,13 +332,6 @@ fieldset[disabled] .btn-cfg-maroon.focus,fieldset[disabled] .btn-cfg-maroon:focu
     color: #000 !important;
     background-color: var(--color-cfg-beige-dark);
     border-color: var(--color-cfg-beige-darker);
-}
-
-.btn-cfg-beige.disabled.focus,.btn-cfg-beige.disabled:focus,.btn-cfg-beige.disabled:hover,
-.btn-cfg-beige[disabled].focus,.btn-cfg-beige[disabled]:focus,.btn-cfg-beige[disabled]:hover,
-fieldset[disabled] .btn-cfg-beige.focus,fieldset[disabled] .btn-cfg-beige:focus,fieldset[disabled] .btn-cfg-beige:hover {
-    background-color: var(--color-cfg-beige);
-    border-color: var(--color-cfg-beige-dark);
 }
 
 .btn-cfg-beige .badge {
@@ -390,15 +361,4 @@ fieldset[disabled] .btn-cfg-beige.focus,fieldset[disabled] .btn-cfg-beige:focus,
 .cfg li .list-group-item.active:hover, .cfg li .list-group-item.active:focus {
     background-color: var(--color-cfg-maroon-dark);
     border-color: var(--color-cfg-maroon-darker);  
-}
-
-/* Pinterst GC Follow us button */
-.gc-followus ul .pinterest::before {
-    background-image: url("https://www.canada.ca/content/dam/hc-sc/images/services/food-guide/icons/pinterest.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    content: "";
-    height: 38px;
-    margin-right: 10px;
-    min-width: 38px;
 }
